@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -26,7 +27,6 @@ fun RemoteTodoScreen(viewModel: RemoteTodoViewModel){
     }
     val scaffoldState = rememberScaffoldState()
     Scaffold(
-        Modifier.padding(bottom = 16.dp),
         scaffoldState = scaffoldState
     ) {
         TodoList(todos = todos.value, icon = Icons.Default.Add, contentDescription = "Save todo"){
