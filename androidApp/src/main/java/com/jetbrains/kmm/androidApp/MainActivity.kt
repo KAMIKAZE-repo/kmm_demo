@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
 import com.jetbrains.kmm.androidApp.navigation.CustomBottomNavigation
 import com.jetbrains.kmm.androidApp.navigation.NavigationGraph
+import com.jetbrains.kmm.androidApp.screens.MainScreenView
 import com.jetbrains.kmm.androidApp.screens.RemoteTodoScreen
 import com.jetbrains.kmm.androidApp.theme.KmmSampleAppTheme
 import com.jetbrains.kmm.shared.data.local.DatabaseDriverFactory
@@ -30,16 +31,5 @@ class MainActivity : AppCompatActivity() {
         KmmSampleAppTheme {
             MainScreenView()
         }
-    }
-}
-
-@Composable
-fun MainScreenView(){
-    val navController = rememberNavController()
-    Scaffold(
-        bottomBar = { CustomBottomNavigation(navController = navController) }
-    ) {
-
-        NavigationGraph(navController = navController)
     }
 }

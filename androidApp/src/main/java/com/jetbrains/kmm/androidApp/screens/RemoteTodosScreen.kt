@@ -18,7 +18,7 @@ import kotlinx.coroutines.flow.collectLatest
 fun RemoteTodoScreen(viewModel: RemoteTodoViewModel){
     //val todos: List<Todo> = viewModel.todos.collectAsState().value
     val todos = remember {
-        mutableStateOf<List<Todo>>( mutableListOf<Todo>())
+        mutableStateOf<List<Todo>>( mutableListOf())
     }
     viewModel.collectTodos {
         newTodos -> todos.value = newTodos
